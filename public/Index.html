@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="Index.css" />
+  </head>
+  <body>
+    <!-- Top Section of the WeatherApp -->
+    <div class="container">
+      <!-- top-left section of WeatherApp -->
+      <div class="grid-item_grid-item-1">
+        <div class="grid-item-1_grid1">
+          <img id="city_icon" src="/Icons_for_cities/anadyr.svg" alt="" />
+        </div>
+        <div class="grid-item-1_grid2">
+          <input
+            list="city_name"
+            id="city"
+            value="Anadyr"
+          />
+          <datalist id="city_name"> </datalist>
+          <!-- <select name="city" class="city" onchange="weather()">
+            <option value="select_city">---Select City---</option>
+          </select> -->
+        </div>
+        <div class="grid-item-1_grid3"></div>
+        <div class="grid-item-1_grid4">
+          <div class="time_div">
+            <p id="time">10:10:44</p>
+            <p id="img-time">
+              <img id="am_pm_state" src="/General_Images_&_Icons/amState.svg" />
+            </p>
+          </div>
+          <p id="date" style="color: #fff"></p>
+        </div>
+      </div>
+      <!-- top-middle section of WeatherApp -->
+      <div class="grid-item_grid-item-2">
+        <div class="grid-item-2_grid1">
+          Temp °C
+          <p id="temp_c"></p>
+        </div>
+        <div class="grid-item-2_grid2">
+          Humiditiy
+          <p id="humidity"></p>
+        </div>
+        <div class="grid-item-2_grid3">
+          Temp F
+          <p id="faren_f"></p>
+        </div>
+        <div class="grid-item-2_grid4">
+          Precipitation
+          <p id="preci"></p>
+        </div>
+      </div>
+      <!-- top-right section of WeatherApp -->
+      <div class="grid-item_grid-item-3">
+        <div id="grid-item-3_row1">
+          <div id="grid-item-3_row1_list1">
+            <!-- <span><p id="now">Now</p></span><span></span> <span><p id="time1">11AM</p></span><span></span>
+            <span><p id="time2">12PM</p></span><span></span> <span><p id="time3">1PM</p></span><span></span>
+            <span><p id="time4">2PM</p></span><span></span> <span><p id="time5">3PM</p></span><span></span> -->
+          </div>
+          <div id="grid-item-3_row1_list2">
+            <span>|</span><span>|</span><span>|</span><span>|</span
+            ><span>|</span><span>|</span><span>|</span><span>|</span
+            ><span>|</span><span>|</span><span>|</span>
+          </div>
+          <div id="grid-item-3_row1_list3">
+            <!-- coded in javascript -->
+          </div>
+          <div id="grid-item-3_row1_list4">
+            <!-- coded in javascript -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Middle Section of the WeatherApp -->
+    <div class="container1">
+      <div class="grid_items">
+        <!-- top header and icons on middle section in WeatherApp -->
+        <div class="grid_item1">
+          <p>Top cities around world</p>
+        </div>
+        <div class="grid_item2">
+          <img
+            id="sunny"
+            src="/Weather_Icons/sunnyIcon.svg"
+          />
+          <img
+            id="winter"
+            src="/Weather_Icons/snowflakeIcon.svg"
+          />
+          <img
+            id="rainy"
+            src="/Weather_Icons/rainyIcon.svg"
+          />
+          <label id="top_cities">Display Top</label
+          ><input
+            type="number"
+            id="top_cities_num"
+            min="3"
+            max="10"
+            value="3"
+          />
+        </div>
+      </div>
+      <!-- Card view of cities  based on weather on middle section in WeatherApp -->
+      <div id="card_view_cities">
+        <button id="left_button"><</button>
+        <div class="grid_items_1"></div>
+        <button id="right_button">></button>
+      </div>
+    </div>
+    <!-- Bottom Section of the WeatherApp -->
+    <div class="container2">
+      <!-- Header part of Bottom Section in WeatherApp -->
+      <div class="grid_head">
+        <div class="grid_head_left">
+          <p>Cities across continents at a Glance</p>
+        </div>
+        <div class="grid_head_right">
+          <p id="print_based_continent">
+            Continent Name
+            <img id="con_arrow" src="/General_Images_&_Icons/arrowDown.svg" />
+          </p>
+          &nbsp&nbsp
+          <p id="print_based_temperature">
+            Temperature <img id="temp_arrow" src="/General_Images_&_Icons/arrowdown.svg" />
+          </p>
+        </div>
+      </div>
+      <!-- Card view bottom section in WeatherApp -->
+      <div class="grid_boxes_1">
+        
+      </div>
+    </div>
+    <!-- Json and Script files added-->
+    <script src="/files/data.json"></script>
+    <script src="Index.js"></script>
+  </body>
+</html>
